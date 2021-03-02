@@ -136,16 +136,16 @@ class Model {
             })
         })
     }
-    updateOutput(operation) {
+    updateOutput(operation) { //set display of operation
         const display = document.querySelector('.operator-display');
         display.innerHTML = operation;
     }
-    updateResult(finalResult){
+    updateResult(finalResult){ //set the final display of result
         const result = document.querySelector('.result');
         console.log(finalResult);
         result.innerHTML = finalResult;
     }
-    formatResult(result) {
+    formatResult(result) { 
         console.log(result);
         const max_output_number_length = 10;
         const output_precision = 5;
@@ -166,7 +166,7 @@ class Model {
             }
         } else return result;
     }
-    keyPress(button) {
+    keyPress(button) { //set display for each type of button
         if(button.type == 'operator') {
             this.operation.push(button.symbol);
             console.log(this.operation);
